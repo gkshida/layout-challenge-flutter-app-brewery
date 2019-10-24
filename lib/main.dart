@@ -12,35 +12,51 @@ class LayoutChallengeApp extends StatelessWidget {
         body: SafeArea(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            mainAxisSize: MainAxisSize.max,
             children: <Widget>[
-              Container(
+              ChallengeContainer(
                 color: Colors.red,
-                width: 100.0,
+                height: double.infinity,
               ),
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Container(
+                  ChallengeContainer(
                     color: Colors.yellow,
-                    height: 100.0,
-                    width: 100.0,
                   ),
-                  Container(
+                  ChallengeContainer(
                     color: Colors.green,
-                    height: 100.0,
-                    width: 100.0,
-                  )
+                  ),
                 ],
               ),
-              Container(
+              ChallengeContainer(
                 color: Colors.blue,
-                width: 100.0,
+                height: double.infinity,
               ),
             ],
           ),
         ),
       ),
+    );
+  }
+}
+
+class ChallengeContainer extends StatelessWidget {
+  const ChallengeContainer({
+    Key key,
+    this.color,
+    this.height = 100.0,
+  }) : super(key: key);
+
+  final Color color;
+  final double width = 100.0;
+  final double height;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: this.color,
+      height: height,
+      width: width,
     );
   }
 }
