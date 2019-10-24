@@ -10,7 +10,35 @@ class LayoutChallengeApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
-          child: Container(),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisSize: MainAxisSize.max,
+            children: <Widget>[
+              Container(
+                color: Colors.red,
+                width: 100.0,
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Container(
+                    color: Colors.yellow,
+                    height: 100.0,
+                    width: 100.0,
+                  ),
+                  Container(
+                    color: Colors.green,
+                    height: 100.0,
+                    width: 100.0,
+                  )
+                ],
+              ),
+              Container(
+                color: Colors.blue,
+                width: 100.0,
+              ),
+            ],
+          ),
         ),
       ),
     );
