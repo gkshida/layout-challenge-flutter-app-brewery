@@ -12,10 +12,10 @@ class LayoutChallengeApp extends StatelessWidget {
         body: SafeArea(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisSize: MainAxisSize.max,
             children: <Widget>[
               Container(
                 color: Colors.red,
-                height: double.infinity,
                 width: 100.0,
               ),
               Column(
@@ -35,7 +35,6 @@ class LayoutChallengeApp extends StatelessWidget {
               ),
               Container(
                 color: Colors.blue,
-                height: double.infinity,
                 width: 100.0,
               ),
             ],
